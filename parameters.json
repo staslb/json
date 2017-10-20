@@ -1,0 +1,72 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "clusterName": {
+            "value": "stastest"
+        },
+        "clusterLocation": {
+            "value": "westeurope"
+        },
+        "computeLocation": {
+            "value": "westeurope"
+        },
+        "adminUserName": {
+            "value": "staslb"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "nicName": {
+            "value": "NIC-stastest"
+        },
+        "publicIPAddressName": {
+            "value": "stastest-PubIP"
+        },
+        "dnsName": {
+            "value": "stastest"
+        },
+        "virtualNetworkName": {
+            "value": "VNet-stastest"
+        },
+        "lbName": {
+            "value": "LB-stastest"
+        },
+        "lbIPName": {
+            "value": "LBIP-stastest"
+        },
+        "applicationDiagnosticsStorageAccountName": {
+            "value": "sfdgstastest7260"
+        },
+        "supportLogStorageAccountName": {
+            "value": "sflogsstastest4506"
+        },
+        "vmImageSku": {
+            "value": "16.04-LTS"
+        },
+        "vmImageVersion": {
+            "value": "latest"
+        },
+        "vmImagePublisher": {
+            "value": "Canonical"
+        },
+        "nt0ephemeralStartPort": {
+            "value": 49152
+        },
+        "nt0ephemeralEndPort": {
+            "value": 65534
+        },
+        "nt0applicationStartPort": {
+            "value": 20000
+        },
+        "nt0applicationEndPort": {
+            "value": 30000
+        },
+        "nt0fabricTcpGatewayPort": {
+            "value": 19000
+        },
+        "nt0fabricHttpGatewayPort": {
+            "value": 19080
+        }
+    }
+}
