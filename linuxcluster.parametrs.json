@@ -11,15 +11,6 @@
       "adminPassword": {
         "value": "1234567890Aa!"
       },
-      "certificateThumbprint": {
-        "value": ""
-      },
-      "sourceVaultValue": {
-        "value": ""
-      },
-      "certificateUrlValue": {
-        "value": ""
-      },
       "vnetName": {
         "value": "sf-apim-vnet"
       },
@@ -67,4 +58,3 @@
       }
     }
   }
-  
