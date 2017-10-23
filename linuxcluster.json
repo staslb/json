@@ -108,12 +108,6 @@
         "description": "The store name where the cert will be deployed in the virtual machine"
       }
     },
-    "sourceVaultValue": {
-      "type": "string",
-      "metadata": {
-        "description": "Resource Id of the key vault, is should be in the format of /subscriptions/<Sub ID>/resourceGroups/<Resource group name>/providers/Microsoft.KeyVault/vaults/<vault name>"
-      }
-    },
     "clusterProtectionLevel": {
       "type": "string",
       "allowedValues": [
