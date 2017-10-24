@@ -15,7 +15,7 @@
             "value": "staslb"
         },
         "adminPassword": {
-            "value": null
+            "value": 1234567890Aa!
         },
         "nicName": {
             "value": "NIC-stastest"
