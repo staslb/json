@@ -31,7 +31,7 @@
         },
         "sampleName": {
             "type": "string",
-            "defaultValue": ""
+            "defaultValue": "stastest"
         }
     },
     "resources": [
