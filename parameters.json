@@ -15,7 +15,7 @@
             "value": "staslb"
         },
         "adminPassword": {
-            "value": "1234567890Aa!"
+            "value": null
         },
         "nicName": {
             "value": "NIC-stastest"
@@ -35,11 +35,8 @@
         "lbIPName": {
             "value": "LBIP-stastest"
         },
-        "applicationDiagnosticsStorageAccountName": {
-            "value": "sfdgstastest7260"
-        },
         "supportLogStorageAccountName": {
-            "value": "sflogsstastest4506"
+            "value": "sflogsstastest8034"
         },
         "vmImageSku": {
             "value": "16.04-LTS"
@@ -66,7 +63,7 @@
             "value": 19000
         },
         "nt0fabricHttpGatewayPort": {
-            "value": 19080
+            "value": 13443
         }
     }
 }
