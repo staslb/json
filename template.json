@@ -135,20 +135,6 @@
                 "description": "Input endpoint2 for the application to use. Replace it with what your application uses"
             }
         },
-        "loadBalancedAppPort3": {
-            "type": "int",
-            "defaultValue": 8081,
-            "metadata": {
-                "description": "Input endpoint3 for the application to use. Replace it with what your application uses"
-            }
-        },
-        "loadBalancedAppPort4": {
-            "type": "int",
-            "defaultValue": 8090,
-            "metadata": {
-                "description": "Input endpoint4 for the application to use. Replace it with what your application uses"
-            }
-        },
         "storageAccountType": {
             "type": "string",
             "allowedValues": [
@@ -180,7 +166,7 @@
         },
         "nt0InstanceCount": {
             "type": "int",
-            "defaultValue": 1,
+            "defaultValue": 3,
             "metadata": {
                 "description": "Instance count for node type"
             }
@@ -371,44 +357,6 @@
                             },
                             "protocol": "tcp"
                         }
-                    },
-                    {
-                        "name": "AppPortLBRule3",
-                        "properties": {
-                            "backendAddressPool": {
-                                "id": "[variables('lbPoolID0')]"
-                            },
-                            "backendPort": "[parameters('loadBalancedAppPort3')]",
-                            "enableFloatingIP": "false",
-                            "frontendIPConfiguration": {
-                                "id": "[variables('lbIPConfig0')]"
-                            },
-                            "frontendPort": "[parameters('loadBalancedAppPort3')]",
-                            "idleTimeoutInMinutes": "5",
-                            "probe": {
-                                "id": "[concat(variables('lbID0'),'/probes/AppPortProbe3')]"
-                            },
-                            "protocol": "tcp"
-                        }
-                    },
-                    {
-                        "name": "AppPortLBRule4",
-                        "properties": {
-                            "backendAddressPool": {
-                                "id": "[variables('lbPoolID0')]"
-                            },
-                            "backendPort": "[parameters('loadBalancedAppPort4')]",
-                            "enableFloatingIP": "false",
-                            "frontendIPConfiguration": {
-                                "id": "[variables('lbIPConfig0')]"
-                            },
-                            "frontendPort": "[parameters('loadBalancedAppPort4')]",
-                            "idleTimeoutInMinutes": "5",
-                            "probe": {
-                                "id": "[concat(variables('lbID0'),'/probes/AppPortProbe4')]"
-                            },
-                            "protocol": "tcp"
-                        }
                     }
                 ],
                 "probes": [
@@ -445,24 +393,6 @@
                             "intervalInSeconds": 5,
                             "numberOfProbes": 2,
                             "port": "[parameters('loadBalancedAppPort2')]",
-                            "protocol": "tcp"
-                        }
-                    },
-                    {
-                        "name": "AppPortProbe3",
-                        "properties": {
-                            "intervalInSeconds": 5,
-                            "numberOfProbes": 2,
-                            "port": "[parameters('loadBalancedAppPort3')]",
-                            "protocol": "tcp"
-                        }
-                    },
-                    {
-                        "name": "AppPortProbe4",
-                        "properties": {
-                            "intervalInSeconds": 5,
-                            "numberOfProbes": 2,
-                            "port": "[parameters('loadBalancedAppPort4')]",
                             "protocol": "tcp"
                         }
                     }
@@ -632,7 +562,7 @@
                     }
                 ],
                 "provisioningState": "Default",
-                "reliabilityLevel": "None",
+                "reliabilityLevel": "Bronze",
                 "upgradeMode": "Automatic",
                 "vmImage": "Linux"
             },
