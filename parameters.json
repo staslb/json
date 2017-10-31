@@ -63,7 +63,7 @@
             "value": 19000
         },
         "nt0fabricHttpGatewayPort": {
-            "value": 13443
+            "value": 19080
         }
     }
 }
